@@ -1,34 +1,24 @@
 <?php
-//déclaration des 2 variables avec les valeur
-$object = 'Réunion';
-$message = 'Bonjour, nous allons faire le point sur les chiffres en cours.';
+// création d'un tableau associatif departments avec comme index le numéro des départements des Hauts de France et en valeur leur nom
+$departments = array();
+$departments['80'] = 'Somme';
+$departments['02'] = 'Aisne';
+$departments['60'] = 'Oise';
+$departments['62'] = 'Pas de Calais';
+$departments['59'] = 'Nord';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-
 <head>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
-  <title>Partie 1 exo 1</title>
+  <title>Partie 3 exo 6</title>
 </head>
-
 <body>
-
-  <p>Objet :
-    <?php
-    //j'affiche avec echo la variable sur mon navigateur de l'objet
-    echo $object;
+  <?php
+  foreach ($departments as $department =>$value){
     ?>
-  </p>
-
-
-  <p>
-    <?php
-      //j'affiche avec echo la variable du message sur mon navigateur
-    echo $message;
-    ?>
-  </p>
-
+    <p>Le Département <?php echo $value; ?> a le numéro <?php echo $department; ?></p>
+  <?php }?>
 </body>
 </html>
